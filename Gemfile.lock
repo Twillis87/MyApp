@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Twillis87/twillis_view_tool
+  revision: 1684d606db89e0dafe2857ccacce99acd8841066
+  specs:
+    twillis_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -218,6 +224,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
+  twillis_view_tool!
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
