@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :blogs
+      resources :portfolios
+      resources :skills
+      resources :technologies
+      resources :topics
+      resources :guest_users
+
+      root to: "users#index"
+    end
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   resources :portfolios, except: [:show]
   get 'angular-items', to: 'portfolios#angular'
