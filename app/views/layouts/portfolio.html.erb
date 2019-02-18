@@ -13,6 +13,7 @@
   </head>
 
   <body>
+<<<<<<< HEAD
     <!-- start of navigation -->
     <div class="collapse bg-inverse" id="navbarHeader">
       <div class="container">
@@ -55,9 +56,17 @@
       </div>
     </section>
     <!-- end of masthead -->
+=======
 
-    <%= render "shared/nav", location: 'top' %>
+    <%= render 'shared/portfolio_nav' %>
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
 
+    <%= yield %>
+>>>>>>> design
+
+    <%= render 'shared/portfolio_footer' %>
+
+<<<<<<< HEAD
     <%= login_helper %>
 
     <%= yield %>
@@ -74,6 +83,8 @@
     </footer>
     <!-- end of footer -->
 
+=======
+>>>>>>> design
     <%= source_helper("application") %>
   </body>
 </html>
