@@ -1,8 +1,8 @@
 <%= form_for(@portfolio_item) do |f| %>
-    <% if @portfolio_item.errors.any? %>
-   <% @portfolio_item.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, :title => "Tyson Willis Portfolio", sticky: false) %>
-   <% end %>
+  <% if @portfolio_item.errors.any? %>
+    <% @portfolio_item.errors.full_messages.each do |error| %>
+      <%= alert_generator error %>
+    <% end %>
   <% end %>
   
   <div class="row">
@@ -24,7 +24,7 @@
       </div>
 
       <div class="form-group">
-         <label class="btn btn-primary">
+        <label class="btn btn-primary">
           Upload a thumb image file <%= f.file_field :thumb_image, style: 'display:none;' %>
         </label>
       </div>
@@ -44,7 +44,7 @@
     <h2>Technolgies Used:</h2>
     <div>
       <%= f.fields_for :technologies do |technology_form| %>
-       <%= render 'technology_fields', f: technology_form %>
+        <%= render 'technology_fields', f: technology_form %>
       <% end %>
 
       <div>
